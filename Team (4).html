@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meet the Team | Vienna Voltage FTC 27427</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="voltage-fx.css?v=4">
+<style>
+:root{
+  --bg:#080d14;--bg2:#0d1520;--bg3:#111c2b;
+  --blue:#3b82f6;--blue2:#60a5fa;--blue3:#1d4ed8;
+  --text:#e8edf4;--muted:#6b7f99;--border:rgba(59,130,246,.18);--card:rgba(255,255,255,.04);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;overflow-x:hidden}
+nav{position:fixed;top:0;width:100%;z-index:1000;background:rgba(8,13,20,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+.nav-inner{max-width:1200px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:16px 32px}
+.nav-logo{font-family:'Space Grotesk',sans-serif;font-size:1.25rem;font-weight:700;color:var(--text);text-decoration:none;display:flex;align-items:center;gap:10px}
+.nav-links{display:flex;gap:32px;align-items:center}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.9rem;font-weight:500;transition:.2s}
+.nav-links a:hover{color:var(--blue2)}
+.nav-cta{background:var(--blue);color:#fff!important;padding:9px 22px;border-radius:6px;font-size:.85rem;font-weight:600;text-decoration:none;transition:.2s}
+.nav-cta:hover{background:var(--blue3)!important}
+
+.page-hero{padding:160px 32px 80px;text-align:center;background:radial-gradient(ellipse 70% 50% at 50% 0%,rgba(29,78,216,.2) 0%,transparent 70%);border-bottom:1px solid var(--border)}
+.page-hero .eyebrow{font-size:.75rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:14px}
+.page-hero h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(2.5rem,6vw,4.5rem);font-weight:700;letter-spacing:-.02em;margin-bottom:20px}
+.page-hero p{color:var(--muted);max-width:600px;margin:0 auto;line-height:1.8;font-size:1.05rem}
+
+section{padding:80px 32px}
+.container{max-width:1100px;margin:auto}
+.section-eyebrow{font-size:.75rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:10px}
+.section-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.8rem,3vw,2.4rem);font-weight:700;color:var(--text);margin-bottom:40px;letter-spacing:-.01em}
+.divider{width:100%;height:1px;background:linear-gradient(to right,transparent,var(--border),transparent)}
+
+/* TEAM GRID */
+.team-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:24px;margin-top:20px}
+.member-card{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:.3s}
+.member-card:hover{border-color:rgba(59,130,246,.4);transform:translateY(-4px)}
+.member-avatar{width:100%;aspect-ratio:1;background:var(--bg3);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.avatar-placeholder{width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,rgba(59,130,246,.2),rgba(29,78,216,.4));display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:1.8rem;font-weight:700;color:var(--blue2);border:2px solid rgba(59,130,246,.3)}
+.member-info{padding:20px}
+.member-name{font-family:'Space Grotesk',sans-serif;font-size:1.05rem;font-weight:600;color:var(--text);margin-bottom:10px}
+.member-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.tag{font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:4px}
+.tag-captain{background:rgba(250,204,21,.15);color:#fbbf24;border:1px solid rgba(250,204,21,.3)}
+.tag-mechanical{background:rgba(239,68,68,.15);color:#f87171;border:1px solid rgba(239,68,68,.3)}
+.tag-programming{background:rgba(52,211,153,.15);color:#34d399;border:1px solid rgba(52,211,153,.3)}
+.tag-design{background:rgba(249,115,22,.15);color:#fb923c;border:1px solid rgba(249,115,22,.3)}
+.tag-outreach{background:rgba(59,130,246,.15);color:#60a5fa;border:1px solid rgba(59,130,246,.3)}
+.member-bio{font-size:.85rem;color:var(--muted);line-height:1.7}
+
+/* ADVISOR ROW */
+.advisor-section{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.advisor-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px;margin-top:20px}
+.advisor-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:28px;display:flex;gap:20px;align-items:flex-start;transition:.3s}
+.advisor-card:hover{border-color:rgba(59,130,246,.4)}
+.advisor-avatar{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,rgba(59,130,246,.15),rgba(29,78,216,.3));display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:1.2rem;font-weight:700;color:var(--blue2);border:1px solid rgba(59,130,246,.25);flex-shrink:0}
+.advisor-name{font-family:'Space Grotesk',sans-serif;font-size:1rem;font-weight:600;margin-bottom:4px}
+.advisor-role{font-size:.75rem;color:var(--blue);font-weight:600;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
+.advisor-bio{font-size:.85rem;color:var(--muted);line-height:1.7}
+
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:40px 32px;text-align:center}
+.footer-logo{font-family:'Space Grotesk',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px;justify-content:center}
+.footer-links{display:flex;gap:24px;justify-content:center;margin-bottom:20px;flex-wrap:wrap}
+.footer-links a{color:var(--muted);text-decoration:none;font-size:.85rem;transition:.2s}
+.footer-links a:hover{color:var(--blue2)}
+.footer-copy{color:var(--muted);font-size:.8rem}
+
+.fade{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+.fade.visible{opacity:1;transform:translateY(0)}
+@media(max-width:768px){.nav-links{display:none}.team-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.team-grid{grid-template-columns:1fr}}
+#prog{position:fixed;top:0;left:0;width:100%;height:2px;z-index:800}
+#prog-bar{height:100%;width:0%;background:linear-gradient(90deg,#1d4ed8,#60a5fa,#a5f3fc);box-shadow:0 0 8px #3b82f6}
+body{cursor:none!important}
+#spark-canvas{position:fixed;inset:0;pointer-events:none;z-index:9999}
+#cursor-glow{position:fixed;width:10px;height:10px;background:#fff;border-radius:50%;pointer-events:none;z-index:10000;transform:translate(-50%,-50%);box-shadow:0 0 6px 2px rgba(96,165,250,.9),0 0 14px 4px rgba(59,130,246,.4)}
+</style>
+</head>
+<body>
+<canvas id="spark-canvas"></canvas>
+<div id="cursor-glow"></div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M13 2L4.5 13.5H11L10 22L19.5 10.5H13L13 2Z" fill="#3b82f6" stroke="#3b82f6" stroke-width="1.5" stroke-linejoin="round"/></svg>
+      Vienna Voltage
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="team.html">Team</a>
+      <a href="seasons.html">Seasons</a>
+      <a href="sponsors.html">Sponsors</a>
+      <a href="donate.html">Donate</a>
+      <a href="get-involved.html" class="nav-cta">Get Involved</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <p class="eyebrow">The people behind the robot</p>
+  <h1>Meet the Team</h1>
+  <p>Vienna Voltage is made up of passionate high school students who believe robotics can change how younger generations see their potential in STEM.</p>
+</div>
+
+<section>
+  <div class="container">
+    <p class="section-eyebrow fade">Team members</p>
+    <h2 class="section-title fade">The team</h2>
+    <div class="team-grid">
+
+      <!-- Harry B — Captain -->
+      <div class="member-card fade">
+        <div class="member-avatar"><div class="avatar-placeholder">HB</div></div>
+        <div class="member-info">
+          <p class="member-name">Harry B</p>
+          <div class="member-tags">
+            <span class="tag tag-captain">Captain</span>
+            <span class="tag tag-design">Robot Design</span>
+            <span class="tag tag-mechanical">Mechanical</span>
+            <span class="tag tag-programming">Programming</span>
+            <span class="tag tag-outreach">Outreach</span>
+          </div>
+          <p class="member-bio">Placeholder — add your grade and a bit about what you work on.</p>
+        </div>
+      </div>
+
+      <!-- Joshua L — Vice Captain -->
+      <div class="member-card fade">
+        <div class="member-avatar"><div class="avatar-placeholder">JL</div></div>
+        <div class="member-info">
+          <p class="member-name">Joshua L</p>
+          <div class="member-tags">
+            <span class="tag tag-captain">Vice Captain</span>
+            <span class="tag tag-design">Robot Design</span>
+            <span class="tag tag-mechanical">Mechanical</span>
+            <span class="tag tag-outreach">Outreach</span>
+          </div>
+          <p class="member-bio">Placeholder — add your grade and a bit about what you work on.</p>
+        </div>
+      </div>
+
+      <!-- Zakhar L -->
+      <div class="member-card fade">
+        <div class="member-avatar"><div class="avatar-placeholder">ZL</div></div>
+        <div class="member-info">
+          <p class="member-name">Zakhar L</p>
+          <div class="member-tags">
+            <span class="tag tag-mechanical">Mechanical</span>
+            <span class="tag tag-programming">Programming</span>
+            <span class="tag tag-outreach">Outreach</span>
+          </div>
+          <p class="member-bio">Placeholder — add your grade and a bit about what you work on.</p>
+        </div>
+      </div>
+
+      <!-- Fionn M -->
+      <div class="member-card fade">
+        <div class="member-avatar"><div class="avatar-placeholder">FM</div></div>
+        <div class="member-info">
+          <p class="member-name">Fionn M</p>
+          <div class="member-tags">
+            <span class="tag tag-design">Robot Design</span>
+            <span class="tag tag-mechanical">Mechanical</span>
+          </div>
+          <p class="member-bio">Placeholder — add your grade and a bit about what you work on.</p>
+        </div>
+      </div>
+
+      <!-- Dalton S -->
+      <div class="member-card fade">
+        <div class="member-avatar"><div class="avatar-placeholder">DS</div></div>
+        <div class="member-info">
+          <p class="member-name">Dalton S</p>
+          <div class="member-tags">
+            <span class="tag tag-design">Robot Design</span>
+            <span class="tag tag-mechanical">Mechanical</span>
+          </div>
+          <p class="member-bio">Placeholder — add your grade and a bit about what you work on.</p>
+        </div>
+      </div>
+
+      <!-- Ethan H -->
+      <div class="member-card fade">
+        <div class="member-avatar"><div class="avatar-placeholder">EH</div></div>
+        <div class="member-info">
+          <p class="member-name">Ethan H</p>
+          <div class="member-tags">
+            <span class="tag tag-design">Robot Design</span>
+            <span class="tag tag-mechanical">Mechanical</span>
+          </div>
+          <p class="member-bio">Placeholder — add your grade and a bit about what you work on.</p>
+        </div>
+      </div>
+
+      <!-- Max S -->
+      <div class="member-card fade">
+        <div class="member-avatar"><div class="avatar-placeholder">MS</div></div>
+        <div class="member-info">
+          <p class="member-name">Max S</p>
+          <div class="member-tags">
+            <span class="tag tag-design">Robot Design</span>
+            <span class="tag tag-mechanical">Mechanical</span>
+          </div>
+          <p class="member-bio">Placeholder — add your grade and a bit about what you work on.</p>
+        </div>
+      </div>
+
+      <!-- Essam M -->
+      <div class="member-card fade">
+        <div class="member-avatar"><div class="avatar-placeholder">EM</div></div>
+        <div class="member-info">
+          <p class="member-name">Essam M</p>
+          <div class="member-tags">
+            <span class="tag tag-design">Robot Design</span>
+            <span class="tag tag-mechanical">Mechanical</span>
+            <span class="tag tag-outreach">Outreach</span>
+          </div>
+          <p class="member-bio">Placeholder — add your grade and a bit about what you work on.</p>
+        </div>
+      </div>
+
+      <!-- Adan L -->
+      <div class="member-card fade">
+        <div class="member-avatar"><div class="avatar-placeholder">AL</div></div>
+        <div class="member-info">
+          <p class="member-name">Adan L</p>
+          <div class="member-tags">
+            <span class="tag tag-design">Robot Design</span>
+            <span class="tag tag-mechanical">Mechanical</span>
+          </div>
+          <p class="member-bio">Placeholder — add your grade and a bit about what you work on.</p>
+        </div>
+      </div>
+
+      <!-- Oliver Y -->
+      <div class="member-card fade">
+        <div class="member-avatar"><div class="avatar-placeholder">OY</div></div>
+        <div class="member-info">
+          <p class="member-name">Oliver Y</p>
+          <div class="member-tags">
+            <span class="tag tag-mechanical">Mechanical</span>
+            <span class="tag tag-outreach">Outreach</span>
+          </div>
+          <p class="member-bio">Placeholder — add your grade and a bit about what you work on.</p>
+        </div>
+      </div>
+
+      <!-- Joseph B -->
+      <div class="member-card fade">
+        <div class="member-avatar"><div class="avatar-placeholder">JB</div></div>
+        <div class="member-info">
+          <p class="member-name">Joseph B</p>
+          <div class="member-tags">
+            <span class="tag tag-mechanical">Mechanical</span>
+          </div>
+          <p class="member-bio">Placeholder — add your grade and a bit about what you work on.</p>
+        </div>
+      </div>
+
+      <!-- Bryan T -->
+      <div class="member-card fade">
+        <div class="member-avatar"><div class="avatar-placeholder">BT</div></div>
+        <div class="member-info">
+          <p class="member-name">Bryan T</p>
+          <div class="member-tags">
+            <span class="tag tag-mechanical">Mechanical</span>
+          </div>
+          <p class="member-bio">Placeholder — add your grade and a bit about what you work on.</p>
+        </div>
+      </div>
+
+      <!-- Isaac L -->
+      <div class="member-card fade">
+        <div class="member-avatar"><div class="avatar-placeholder">IL</div></div>
+        <div class="member-info">
+          <p class="member-name">Isaac L</p>
+          <div class="member-tags">
+            <span class="tag tag-mechanical">Mechanical</span>
+            <span class="tag tag-outreach">Outreach</span>
+          </div>
+          <p class="member-bio">Placeholder — add your grade and a bit about what you work on.</p>
+        </div>
+      </div>
+
+      <!-- Caden O -->
+      <div class="member-card fade">
+        <div class="member-avatar"><div class="avatar-placeholder">CO</div></div>
+        <div class="member-info">
+          <p class="member-name">Caden O</p>
+          <div class="member-tags">
+            <span class="tag tag-programming">Programming</span>
+          </div>
+          <p class="member-bio">Placeholder — add your grade and a bit about what you work on.</p>
+        </div>
+      </div>
+
+      <!-- Leo W -->
+      <div class="member-card fade">
+        <div class="member-avatar"><div class="avatar-placeholder">LW</div></div>
+        <div class="member-info">
+          <p class="member-name">Leo W</p>
+          <div class="member-tags">
+            <span class="tag tag-programming">Programming</span>
+          </div>
+          <p class="member-bio">Placeholder — add your grade and a bit about what you work on.</p>
+        </div>
+      </div>
+
+      <!-- Landon Y -->
+      <div class="member-card fade">
+        <div class="member-avatar"><div class="avatar-placeholder">LY</div></div>
+        <div class="member-info">
+          <p class="member-name">Landon Y</p>
+          <div class="member-tags">
+            <span class="tag tag-programming">Programming</span>
+          </div>
+          <p class="member-bio">Placeholder — add your grade and a bit about what you work on.</p>
+        </div>
+      </div>
+
+      <!-- Karim A -->
+      <div class="member-card fade">
+        <div class="member-avatar"><div class="avatar-placeholder">KA</div></div>
+        <div class="member-info">
+          <p class="member-name">Karim A</p>
+          <div class="member-tags">
+            <span class="tag tag-programming">Programming</span>
+          </div>
+          <p class="member-bio">Placeholder — add your grade and a bit about what you work on.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="advisor-section">
+  <div class="container">
+    <p class="section-eyebrow fade">Mentors & advisors</p>
+    <h2 class="section-title fade">Who guides us</h2>
+    <div class="advisor-grid">
+
+      <div class="advisor-card fade">
+        <div class="advisor-avatar">?</div>
+        <div>
+          <p class="advisor-name">Team Mentor</p>
+          <p class="advisor-role">Mentor</p>
+          <p class="advisor-bio">Placeholder — add your mentor's name, background, and what they contribute to the team.</p>
+        </div>
+      </div>
+
+      <div class="advisor-card fade">
+        <div class="advisor-avatar">?</div>
+        <div>
+          <p class="advisor-name">Faculty Advisor</p>
+          <p class="advisor-role">Advisor</p>
+          <p class="advisor-bio">Placeholder — add your advisor's name and school affiliation if applicable.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M13 2L4.5 13.5H11L10 22L19.5 10.5H13L13 2Z" fill="#3b82f6" stroke="#3b82f6" stroke-width="1.5" stroke-linejoin="round"/></svg>
+    Vienna Voltage
+  </div>
+  <div class="footer-links">
+    <a href="index.html">Home</a><a href="team.html">Team</a>
+    <a href="seasons.html">Seasons</a><a href="sponsors.html">Sponsors</a>
+    <a href="get-involved.html">Get Involved</a><a href="donate.html">Donate</a>
+  </div>
+  <p class="footer-copy">© 2026 Vienna Voltage · FTC Team 27427 · ftcviennavoltage@gmail.com</p>
+</footer>
+
+<script src="voltage-fx.js?v=4"></script>
+</body>
+</html>
