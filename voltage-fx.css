@@ -41,14 +41,6 @@ body.menu-open .nav-scrim{opacity:1;visibility:visible}
 }
 
 /* ---------- Cursor ring (companion to existing #cursor-glow) ---------- */
-#cursor-ring{position:fixed;left:0;top:0;width:34px;height:34px;border:1.5px solid rgba(96,165,250,.45);
-  border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);
-  transition:width .22s ease, height .22s ease, border-color .22s ease, opacity .3s ease;will-change:transform}
-body.cursor-hover #cursor-ring{width:56px;height:56px;border-color:rgba(96,165,250,.85)}
-body.cursor-down #cursor-ring{width:24px;height:24px;border-color:rgba(165,243,252,.95)}
-/* JS positions the glow every frame via transform — drop the lagging transition */
-#cursor-glow{left:0 !important;top:0 !important;transition:background .15s ease, box-shadow .15s ease !important;will-change:transform}
-body.cursor-hover #cursor-glow{background:rgba(96,165,250,.9);box-shadow:0 0 10px 3px rgba(96,165,250,.95),0 0 22px 8px rgba(59,130,246,.5)}
 
 /* ---------- Interaction helpers ---------- */
 .btn-primary,.btn-secondary,.nav-cta,[data-magnetic]{will-change:transform}
