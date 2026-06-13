@@ -27,6 +27,8 @@ body.menu-open .nav-toggle span:nth-child(3){transform:translateY(-7px) rotate(-
 .nav-scrim{position:fixed;inset:0;background:rgba(4,8,13,.55);backdrop-filter:blur(2px);opacity:0;visibility:hidden;transition:opacity .35s ease, visibility .35s ease;z-index:1090}
 body.menu-open .nav-scrim{opacity:1;visibility:visible}
 
+body { cursor: none !important; }
+
 @media(max-width:900px){
   .nav-toggle{display:flex}
   .nav-links{display:flex !important;position:fixed;top:0;right:0;height:100dvh;width:min(80vw,300px);
